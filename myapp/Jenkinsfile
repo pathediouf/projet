@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven3'
+    }
+    stages ('obtenir la version de maven') {
+        steps {
+            sh 'mvn --version'
+        }
+
+    }
+}
